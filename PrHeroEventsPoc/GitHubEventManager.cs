@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Octokit;
 
@@ -13,26 +15,41 @@ namespace PrHeroEventsPoc
 
     public class GitHubEventManager : IGitHubEventManager
     {
+        public event Action<PullRequestEventModel> PullRequestEvent;
+
+        private GitHubPullRequestEventModelMapper gitHubPullRequestEventModelMapper = new GitHubPullRequestEventModelMapper();
+
         public void HandleGitHubEvent(string eventType, JObject eventData)
         {
-
+            switch (eventType)
+            {
+                case @"pull_request":
+                    var pr = gitHubPullRequestEventModelMapper.Map(eventData);
+                    PullRequestEvent?.Invoke(pr);
+                    break;
+            }
         }
     }
 
-    public class PullRequestEvent
+    public class GitHubPullRequestEventModelMapper
     {
-        public PullRequestEvent(string action, int number, object changes, object pullRequest)
+        public PullRequestEventModel Map(JObject pullRequestEventData)
         {
-
+            return pullRequestEventData.ToObject<PullRequestEventModel>();
         }
+    }
 
-        public PullRequestEventAction Action { get; }
+    public class PullRequestEventModel
+    {
+        [JsonProperty("action")]
+        public PullRequestEventAction Action { get; set; }
 
-        public int Number { get; }
+        [JsonProperty("number")]
+        public int Number { get; set; }
 
-        public object Changes { get; }
+        //public object Changes { get; }
 
-        public object PullRequest { get; }
+        //public object PullRequest { get; }
     }
 
     public enum PullRequestEventAction

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrHeroEventsPoc", "PrHeroEv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrHeroEventsPocConsole", "PrHeroEventsPocConsole\PrHeroEventsPocConsole.csproj", "{0A43831C-573C-4E86-844B-4BA8753293F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrHeroGitHubWebHookApi", "PrHeroGitHubWebHookApi\PrHeroGitHubWebHookApi.csproj", "{C77A4E6D-6041-4636-9042-8287EFE0A420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrHeroGitHubWebHookApi", "PrHeroGitHubWebHookApi\PrHeroGitHubWebHookApi.csproj", "{C77A4E6D-6041-4636-9042-8287EFE0A420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrHeroGitHubWebHooksBuiltInApi", "PrHeroGitHubWebHooksBuiltInApi\PrHeroGitHubWebHooksBuiltInApi.csproj", "{10D1240A-6E04-44BE-9FAA-00B737892C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrHeroGitHubWebHooksBuiltInApi", "PrHeroGitHubWebHooksBuiltInApi\PrHeroGitHubWebHooksBuiltInApi.csproj", "{10D1240A-6E04-44BE-9FAA-00B737892C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrHeroEventsPocTests", "PrHeroEventsPocTests\PrHeroEventsPocTests.csproj", "{1A86AAE5-C56A-48A5-9746-870A7BDAE761}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{10D1240A-6E04-44BE-9FAA-00B737892C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10D1240A-6E04-44BE-9FAA-00B737892C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10D1240A-6E04-44BE-9FAA-00B737892C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A86AAE5-C56A-48A5-9746-870A7BDAE761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A86AAE5-C56A-48A5-9746-870A7BDAE761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A86AAE5-C56A-48A5-9746-870A7BDAE761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A86AAE5-C56A-48A5-9746-870A7BDAE761}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

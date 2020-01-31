@@ -49,7 +49,8 @@ namespace PrHeroEventsPoc
 
         //public object Changes { get; }
 
-        //public object PullRequest { get; }
+        [JsonProperty("pull_request")]
+        public PullRequest PullRequest { get; set; }
     }
 
     public enum PullRequestEventAction
@@ -70,6 +71,7 @@ namespace PrHeroEventsPoc
 
     public class PullRequest
     {
-        
+        [JsonProperty("url")]
+        public string Url { get; set; }
     }
 }

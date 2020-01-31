@@ -1,12 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json.Linq;
 using Octokit;
 
 namespace PrHeroEventsPoc
 {
-    public class GitHubEventManager
+    public interface IGitHubEventManager
     {
+        void HandleGitHubEvent(string eventType, JObject eventData);
+    }
+
+    public class GitHubEventManager : IGitHubEventManager
+    {
+        public void HandleGitHubEvent(string eventType, JObject eventData)
+        {
+
+        }
     }
 
     public class PullRequestEvent
